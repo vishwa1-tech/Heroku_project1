@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Status</title>
+
+
+</head>
+<body>
+<div class="login">
+<form action="{{ url_for('predict')}}" method="post">
+
+
+	<h4>Gender</h4>
+    <input type="number" id="uigender"  value="1.0" required="required"/>
+
+	<h4>Age</h4>
+    <input type="number" id="uiage"  value="66.0" required="required"/>
+
+    <h4>Hyper tension</h4>
+    <input  type="number" id="uihypertension" value="0.0" required="required"/>
+
+    <h4>Heart Disease</h4>
+    <input  type="number" id="uiheart_disease"  value="0.0" required="required"/>
+
+    <h4>Ever Married</h4>
+    <input  type="number" id="uiever_married"  value="1.0" required="required"/>
+
+    <h4>Work Type</h4>
+    <input  type="number" id="uiwork_type" value="2.0" required="required"/>
+
+    <h4>Average Glucose Level</h4>
+    <input type="number" id="uiavg_glucose_level"  value="76.46" required="required"/>
+
+    <h4>BMI</h4>
+    <input type="number" id="uibmi" value="21.2" required="required"/>
+
+    <h4>Area Smoking Status</h4>
+    <input type="number" id="uismoking_status"  value="1.0" required="required"/>
+
+    <button type="submit" class="btn btn-secondary btn-lg">predict</button>
+</form>
+<br>
+<br>
+{{prediction_text}}
+</div>
+</body>
+</html>
